@@ -137,22 +137,67 @@ function resetInter() {
 // ===========like img===========
 let modalBody = document.querySelector('#modalbody')
 let heartBtn = document.querySelectorAll('.heart')
+let bookmark = document.querySelectorAll('.bookmark')
 let addArr=[]
+let count =0
 
 
+bookmark.forEach(bookmark => bookmark.addEventListener('click', (e)=> {
+  e.target.style.color= "blue"
+  console.log(e.target);
+
+}))
 
 heartBtn.forEach(heartBtn => heartBtn.addEventListener('click', (e) => {
   e.target.style.color= 'red'
+  count ++;
 })
 )
 
+// ========ofcancas========
+
+
+
+let ofcanvasModal = document.querySelector('#ofcanvasmodal')
+let offcanvas__list = document.querySelector('#offcanvas__list')
+
+
+
+
 function addLike (e) {
+
   for(let i=0; i<=posts.length; i++) {
     if(posts[i].id==e) {
       let b = posts[i];    
       addArr.push(b)
     }
   }
+  console.log(addArr);
+      offcanvas__list.innerHTML =''
+
+      addArr.forEach(item => {
+
+      let offcanvasItem = document.createElement('li');
+      offcanvasItem.className = 'instagram__item';
+
+  offcanvasItem.innerHTML = `
+        <img class="instagram__img" src="${item.media}" alt="img">
+        <div style="display: flex;" class="instagram__btn-box">
+          <button class="instagram__btn btn-heart"><i class='bx bxs-heart'></i></button>
+        <span class="instagram__heart-count"id ="heartcount" onclick="countLike">
+        ${item.like}
+        </span>
+      </div>
+        <div style="display: flex;" class="instagram__btn-boxmess">
+          <button class="instagram__btn btn-mess"><i class='bx bxs-message-rounded'></i></button>
+          <span class="instagram__heart-count" onclick="countComment">${item.comment}</span>
+        </div>
+        <div class="instagram__item-shadow"></div>
+          `
+          offcanvas__list.appendChild(offcanvasItem)
+        })
+
+
 }
 
 
@@ -160,43 +205,43 @@ function addLike (e) {
 //=========modal slider=============
 
 
-// let modalList = document.querySelector('#modallist ')
-// let modalItem = document.querySelectorAll('#modallist img')
+let modalList = document.querySelector('#modallist ')
+let modalItem = document.querySelectorAll('#modallist img')
 
-// let modalLeftBtn = document.querySelector('#left')
-// let modalRightBtn = document.querySelector('#right')
+let modalLeftBtn = document.querySelector('#modalLeftBtn')
+let modalRightBtn = document.querySelector('#modalRightBtn')
 
-// let sdx =0;
+let sdx =0;
 
 
-// function modalSlider() {
-//     if(sdx > modalItem.length-1){
-//         sdx = 0;
-//     }
-//     else if(sdx < 0) {
-//         sdx = modalItem-1
-//     }
+function modalSlider() {
+    if(sdx > modalItem.length-1){
+        sdx = 0;
+    }
+    else if(sdx < 0) {
+        sdx = modalItem-1
+    }
 
-//     modalList.style.transform =`translateX(${-sdx*450}px)`
-// }
-// modalRightBtn.addEventListener('click', ()=> {
-//     sdx++;
-//     resetInter();
-//     modalSlider();
-// })
-// modalLeftBtn.addEventListener('click', ()=> {
-//     sdx--;
-//     resetInter();
-//     modalSlider();
-// })
+    modalList.style.transform =`translateX(${-sdx*550}px)`
+}
+modalRightBtn.addEventListener('click', ()=> {
+    sdx++;
+    resetInter();
+    modalSlider();
+})
+modalLeftBtn.addEventListener('click', ()=> {
+    sdx--;
+    resetInter();
+    modalSlider();
+})
 
-// let modalInterval = setInterval(run, 3000);
+let modalInterval = setInterval(run, 3000);
 
-// function run() {
-//     sdx++;
-//     modalSlider();
-// }
-// function resetInter() {
-//     clearInterval(modalInterval);
-//     modalInterval = setInterval(run, 3000)
-// }
+function run() {
+    sdx++;
+    modalSlider();
+}
+function resetInter() {
+    clearInterval(modalInterval);
+    modalInterval = setInterval(run, 3000)
+}

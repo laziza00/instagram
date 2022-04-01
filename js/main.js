@@ -7,7 +7,6 @@ let bookmark = document.querySelectorAll('.bookmark')
 let addArr=[]
 
 
-
 function showPosts(posts) {
 
     posts.forEach(item => {

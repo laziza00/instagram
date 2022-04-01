@@ -19,8 +19,8 @@
     <div class="container">
       <div style=" display: flex;
       justify-content: space-between;">
-           <a href="#" class="instagram__logo-link">
-            Instagram
+           <a href="#" class="">
+            <img src="images/logo.png" alt="img">
           </a>
           <div class="instagram__input-box">
             <button class="instagram__input-btn">
@@ -41,7 +41,7 @@
            <button class="instagram__header-btn ">
             <i class='bx bx-compass'></i>
            </button>
-           <button class="instagram__header-btn " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+           <button class="instagram__header-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <i class='bx bx-heart'></i>
            </button>
            <button class="instagram__header-btn user-btn">
@@ -58,7 +58,7 @@
     <div class="intagram__posts">
       <div>
         <div class="instagram__middle-info">
-          <div style="width: 30%; display: flex;
+          <div class="instagram__im-box" style="width: 30%; display: flex;
           justify-content: center;">
             <a href="#" style="border-radius: 50%; border: 3px solid red; width: 165px; height: 165px; padding: 4px 4px;">
               <img class="instagram__img-logo" src="images/photo-logo.jpg" alt="img">
@@ -205,26 +205,50 @@
         </div>
     
       <div class="instagram__post-btn__box" id="postsort">
-        <button class="instagram__post-btn"><i class='bx bx-grid' ></i>posts</button>
-        <button class="instagram__post-btn"> <i class='bx bx-user-pin'></i>tagged</button>
-      </div>
-      <ul class="instagram__list row" id="instagramlist">
-        <!-- <li class="instagram__item col-xs-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button" >
-          <img class="instagram__img" src="https://picsum.photos/400/400" alt="img">
-          <div style="display: flex;" class="instagram__btn-box">
-            <button class="instagram__btn btn-heart heart" ><i class='bx bxs-heart'></i></button>
-          <span class="instagram__heart-count">
-            734
-          </span>
-        </div>
-          <div style="display: flex;" class="instagram__btn-boxmess">
-            <button class="instagram__btn btn-mess"><i class='bx bxs-message-rounded'></i></button>
-            <span class="instagram__heart-count">765</span>
-          </div>
-          <div class="instagram__item-shadow"></div>
-        </li> -->
+        
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active instagram__post-btn" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">posts</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link instagram__post-btn" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">tagged</button>
+          </li>
 
-      </ul>
+        </ul>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <ul class="instagram__list row" id="instagramlist">
+              <!-- <li class="instagram__item col-xs-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button" >
+                <img class="instagram__img" src="https://picsum.photos/400/400" alt="img">
+                <div style="display: flex;" class="instagram__btn-box">
+                  <button class="instagram__btn btn-heart heart" ><i class='bx bxs-heart'></i></button>
+                <span class="instagram__heart-count">
+                  734
+                </span>
+              </div>
+                <div style="display: flex;" class="instagram__btn-boxmess">
+                  <button class="instagram__btn btn-mess"><i class='bx bxs-message-rounded'></i></button>
+                  <span class="instagram__heart-count">765</span>
+                </div>
+                <div class="instagram__item-shadow"></div>
+              </li> -->
+      
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <ul class="post__list row" id="postlist">
+
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- <button class="instagram__post-btn" id="postBtn"><i class='bx bx-grid' ></i>posts</button>
+        <button class="instagram__post-btn" id="tagged"> <i class='bx bx-user-pin'></i>tagged</button> -->
+      
+
+
     </div>
     </div>
   </div>
@@ -239,9 +263,8 @@
     <div class="modal-content">
       
         <button type="button" class="btn-close modal__close" data-bs-dismiss="modal" aria-label="Close"></button>
-   
       <div class="modal-body" id="modalbody">
-        <div  class="modal__info" style="width: 100%;">
+        <!-- <div  class="modal__info" style="width: 100%;">
         <div style="width: 50%; overflow: hidden; position: relative; ">
           <button id="modalLeftBtn" class="slide__btn leftbtn">
             <i class='bx bx-chevron-left' ></i>
@@ -326,7 +349,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       </div>
 
     </div>
@@ -339,8 +362,8 @@
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h5 id="offcanvasRightLabel" class="offcanvas__my-title">My Favourite Movies</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 id="offcanvasRightLabel" class="offcanvas__my-title"></h5>
+    <button type="button" class="btn-close text-reset" data-8bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body" id="ofcanvasmodal">
       <ul class="offcanvas__list" id="offcanvas__list" style="list-style-type: none;">

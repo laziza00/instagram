@@ -61,7 +61,7 @@ const posts = [
     },
     {
         id: 5,
-        media:  ["images/photo12.jpg"],
+        media:  ["images/photo10.jpg"],
         desc: `Muhammadali Eshonqulov bilan suhbat bo'lib o'tdi
         Kuni kecha markazimizning Chilonzor filiali o'quvchilar bilan to'lib-toshdi. Ya'ni hozirda ko'plab yoshlar uchun o'rnak bo'lib kelayotgan inson — Muhammadali Eshonqulov «Najot Ta'lim» markazida mehmon bo'ldi.
         ✨ Mehmonimiz bilan o'quvchilarimiz o'rtasida samimiy suhbat bo'lib o'tdi. Spikerimiz yoshlarga ruhiyat, nafs tarbiyasi, muvaffaqiyat aslida nima ekanligi kabi bir qator mavzularda o'z maslahat va tavsiyalarini berib o'tdilar. Tadbir so'nggida esa ishtirokchilar bilan savol-javob bo'lib o'tdi. Ushbu suhbat barcha uchun manfaatli bo'lganligiga ishonamiz.

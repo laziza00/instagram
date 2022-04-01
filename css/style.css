@@ -206,6 +206,13 @@ body {
   margin: 0 6px 0 0;
   font-size: 16px;
 }
+.post__list {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
 .instagram__list {
   width: 100%;
   padding: 0;
@@ -284,13 +291,14 @@ body {
 
 /* =============modal============ */
 .modal-body {
-  height: 600px !important;
+  height: 100% !important;
 }
 .modal__info {
   width: 100%;
   display: flex;
 }
 .modal__desc {
+
   position: relative;
   padding: 0 0 0 20px;
 }
@@ -360,9 +368,6 @@ body {
   margin: 0;
 }
 .modal__bot-box {
-  position: absolute;
-  bottom: -40px;
-  left: 10px;
   width: 100%;
   border-top: 1px solid #e7e2e2;
   padding: 10px 0 10px 10px;
@@ -410,4 +415,23 @@ body {
   font-size: 16px;
   text-transform: capitalize;
   margin: 0;
+}
+
+
+@media screen  and (max-width: 765px){
+
+  .instagram__middle-info {
+    flex-direction: column;
+  }
+  .instagram__im-box {
+    margin-bottom: 30px;
+  }
+  
+}
+@media screen  and (max-width: 576px){
+
+  .instagram__input-box {
+      display: none;
+  }
+  
 }

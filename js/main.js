@@ -399,57 +399,57 @@ function bookmarkWork (id) {
 //=========modal slider=============
 
 
-let modalList = document.querySelector('#modallist ')
-let modalItem = document.querySelectorAll('#modallist img')
+// let modalList = document.querySelector('#modallist ')
+// let modalItem = document.querySelectorAll('#modallist img')
 
-let modalLeftBtn = document.querySelector('#modalLeftBtn')
-let modalRightBtn = document.querySelector('#modalRightBtn')
+// let modalLeftBtn = document.querySelector('#modalLeftBtn')
+// let modalRightBtn = document.querySelector('#modalRightBtn')
 
-let sdx =0;
-let mediaArr;
-
-
-modalList = mediaArr.join("")
-mediaArr = modalList.join("")
+// let sdx =0;
+// let mediaArr;
 
 
-
-for (let item in posts.length) {
-  let img = document.createElement('img');
-  img.innerHTML =`
-  <img class="modal__img" src="${item.media[0]}" alt="img">
-  `
-}
+// modalList = mediaArr.join("")
+// mediaArr = modalList.join("")
 
 
-function modalSlider() {
-    if(sdx > modalItem.length-1){
-        sdx = 0;
-    }
-    else if(sdx < 0) {
-        sdx = modalItem-1
-    }
 
-    modalList.style.transform =`translateX(${-sdx*550}px)`
-}
-modalRightBtn.addEventListener('click', ()=> {
-    sdx++;
-    resetInter();
-    modalSlider();
-})
-modalLeftBtn.addEventListener('click', ()=> {
-    sdx--;
-    resetInter();
-    modalSlider();
-})
+// for (let item in posts.length) {
+//   let img = document.createElement('img');
+//   img.innerHTML =`
+//   <img class="modal__img" src="${item.media[0]}" alt="img">
+//   `
+// }
 
-let modalInterval = setInterval(run, 3000);
 
-function run() {
-    sdx++;
-    modalSlider();
-}
-function resetInter() {
-    clearInterval(modalInterval);
-    modalInterval = setInterval(run, 3000)
-}
+// function modalSlider() {
+//     if(sdx > modalItem.length-1){
+//         sdx = 0;
+//     }
+//     else if(sdx < 0) {
+//         sdx = modalItem-1
+//     }
+
+//     modalList.style.transform =`translateX(${-sdx*550}px)`
+// }
+// modalRightBtn.addEventListener('click', ()=> {
+//     sdx++;
+//     resetInter();
+//     modalSlider();
+// })
+// modalLeftBtn.addEventListener('click', ()=> {
+//     sdx--;
+//     resetInter();
+//     modalSlider();
+// })
+
+// let modalInterval = setInterval(run, 3000);
+
+// function run() {
+//     sdx++;
+//     modalSlider();
+// }
+// function resetInter() {
+//     clearInterval(modalInterval);
+//     modalInterval = setInterval(run, 3000)
+// }
